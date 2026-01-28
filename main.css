@@ -1,0 +1,598 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+/*******************************************************************************
+ * Themes
+ ******************************************************************************/
+ :root {
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: rgba(181, 9, 172, 0.05);
+  --global-text-color: #000000;
+  --global-text-color-light: #828282;
+  --global-theme-color: #6C5B7B; /* To change main color! colors in _variables.scss */
+  --global-hover-color: #6C5B7B; /* To change main color! colors in _variables.scss */
+  --global-hover-color-light: #eeeeee;
+  --global-footer-bg-color: #1C1C1D;
+  --global-footer-text-color: #e8e8e8;
+  --global-footer-link-color: #ffffff;
+  --global-distill-app-color: #828282;
+  --global-divider-color: rgba(0,0,0,.1);
+  --global-card-bg-color: #ffffff;
+}
+
+/* Pastel palette for the student tags */
+.pastel-pink { color: #E27998; }     /* triangle */
+.pastel-purple {
+  color: #A76BCF;
+  font-size: 1.5em;   /* increase size */
+  line-height: 0;      /* keeps baseline aligned */
+  display: inline-block;
+  transform: translateY(1px); /* tiny vertical adjustment */
+}
+.pastel-blue { color: #6BAED6; }     /* spade (unused unless you add it) */
+.pastel-green { color: #6BC38E; }    /* club */
+.pastel-yellow { color: #F7D774; }   /* optional */
+.pastel-orange { color: #F6A45A; }   /* star */
+
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  scroll-margin-top: 66px;
+}
+
+body.fixed-top-nav {
+  padding-top: 33px;
+}
+
+body.sticky-bottom-footer {
+  padding-bottom: 0;
+}
+
+.container {
+  max-width: 925px;
+}
+
+.pub-thrust {
+  border: 2px solid #6D4C71; /* or your thrust-specific color */
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem; /* adds breathing room inside the box */
+  margin-bottom: 2rem;
+  background-color: #fff; /* ensure a clean base */
+}
+
+.pub-thrust h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem; /* space below the title */
+  font-size: 1.75rem; /* optional: slightly bigger */
+  font-weight: 700;
+}
+
+.pub-thrust p,
+.pub-thrust > div:not(.pub-list) {
+  display: block;
+  margin-bottom: 1rem; /* space between description and table */
+  line-height: 1.5;
+}
+
+.pub-thrust strong {
+  font-weight: 650; /* heavier than normal bold */
+}
+
+.pub-list {
+  margin-top: 1rem;
+}
+
+.pub-list table td {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+
+.thrust-1 {
+  border-color: #6B4E71; /* Deep muted plum - anchor color */
+}
+
+.thrust-2 {
+  border-color: #8C5C70; /* Muted mauve-rose - softer, warmer accent */
+}
+
+.thrust-3 {
+  border-color: #577A84; /* Desaturated blue-teal - cool complement */
+}
+
+.thrust-4 {
+  border-color: #8A6B3F; /* Muted ochre - warm balance to cool thrust-3 */
+}
+
+.future-vision {
+  border: 2px solid #A97B3C; /* Slightly richer gold-brown */
+  border-radius: 12px;
+  background-color: #FDF9F4; /* Soft warm off-white */
+  padding: 2rem;
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+
+.future-vision h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.future-vision p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.future-vision ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.future-vision li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+
+
+/*******************************************************************************
+ * Styles for the base elements of the theme.
+ ******************************************************************************/
+h2 {
+  padding-top: 20px;
+}
+
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+  color: var(--global-text-color);
+}
+
+hr {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.fa-bluesky {
+  font-size: 0.82em; /* scale down slightly */
+}
+
+.fa-x-twitter {
+  font-size: 0.87em; /* scale down slightly */
+}
+
+
+/* Compact, uniform publication buttons */
+.pub-list .button-cell .btn {
+  margin: 3;
+  font-size: 0.65rem;        /* small, clean text */
+  font-weight: 385;         /* medium weight for readability */
+  padding: 2px 12px;        /* compact padding */
+  border-radius: 4px;       /* subtle rounding */
+  display: inline-flex;     
+  align-items: center;      /* vertically center text */
+  justify-content: center;  /* center horizontally */
+  height: 28px;             /* fixed uniform height */
+  line-height: 1.2;         /* keeps text snug */
+  box-sizing: border-box;
+}
+
+
+table td, table th {
+  color: var(--global-text-color);
+}
+table td {
+  font-size: 1rem;
+}
+
+a, table.table a {
+  color: var(--global-theme-color);
+}
+a:hover, table.table a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
+a:hover:after :not(.nav-item.dropdown), table.table a:hover:after :not(.nav-item.dropdown) {
+  width: 100%;
+}
+
+.btn{
+  margin: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+figure, img {
+  max-width: 90vw;
+}
+
+blockquote {
+  background: var(--global-bg-color);
+  border-left: 2px solid var(--global-theme-color);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-size: 1.2rem;
+}
+
+.equation {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.caption {
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--global-card-bg-color);
+}
+.card img {
+  width: 100%;
+}
+.card .card-title {
+  color: var(--global-text-color);
+}
+.card .card-item {
+  width: auto;
+  margin-bottom: 10px;
+}
+.card .card-item .row {
+  display: flex;
+  align-items: center;
+}
+
+.citation, .citation-number {
+  color: var(--global-theme-color);
+}
+
+.profile {
+  margin-right: 0rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.profile .address {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: monospace;
+}
+.profile .address p {
+  display: inline-block;
+  margin: 0;
+}
+
+.profile img {
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 29%;
+  }
+  .profile .address p {
+    display: block;
+  }
+}
+.post-description {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+.post-description a {
+  color: inherit;
+}
+.post-description a:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.navbar {
+  box-shadow: none;
+  /* border-bottom: 1px solid var(--global-divider-color); */
+  background-color: var(--global-hover-color-light);
+  opacity: 0.95;
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+}
+.navbar .dropdown-menu a:not(.active) {
+  color: var(--global-text-color);
+}
+.navbar .dropdown-menu a:hover {
+  color: var(--global-hover-color);
+}
+.navbar .dropdown-menu .dropdown-divider {
+  border-top: 1px solid var(--global-divider-color) !important;
+}
+
+.dropdown-item {
+  color: var(--global-text-color);
+}
+.dropdown-item:hover {
+  color: var(--global-hover-color);
+  background-color: var(--global-bg-color);
+}
+
+.navbar.navbar-light a:hover {
+  text-decoration: none;
+}
+.navbar.navbar-light .navbar-brand {
+  color: var(--global-text-color);
+}
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--global-text-color);
+}
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: var(--global-hover-color);
+}
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  background-color: inherit;
+  font-weight: bolder;
+  color: var(--global-theme-color);
+}
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
+  color: var(--global-hover-color);
+}
+.navbar.navbar-light .navbar-brand.social {
+  padding-bottom: 0;
+  padding-top: 0;
+  font-size: 1.7rem;
+}
+.navbar.navbar-light .navbar-brand.social a i::before {
+  color: var(--global-text-color);
+  transition-property: all 0.2s ease-in-out;
+}
+.navbar.navbar-light .navbar-brand.social a:hover i::before {
+  color: var(--global-theme-color);
+}
+
+/* Keep hamburger static (3 lines) */
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--global-text-color);
+  border-radius: 1px;
+  margin-bottom: 4px;
+}
+
+
+.social {
+  text-align: center;
+}
+.social .contact-icons {
+  font-size: 4rem;
+}
+.social .contact-icons a i::before {
+  color: var(--global-text-color);
+  transition-property: all 0.2s ease-in-out;
+}
+.social .contact-icons a:hover i::before {
+  color: var(--global-theme-color);
+}
+.social .contact-note {
+  font-size: 0.8rem;
+}
+
+footer.fixed-bottom {
+  background-color: var(--global-footer-bg-color);
+  font-size: 0.75rem;
+}
+footer.fixed-bottom .container {
+  color: var(--global-footer-text-color);
+  padding-top: 9px;
+  padding-bottom: 8px;
+}
+footer.fixed-bottom a {
+  color: var(--global-footer-link-color);
+}
+footer.fixed-bottom a:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+.distill a:hover {
+  border-bottom-color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.publications {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+.publications h1 {
+  color: var(--global-theme-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.publications h2 {
+  margin-bottom: 1rem;
+}
+.publications h2 span {
+  font-size: 1.5rem;
+}
+.publications h2.year {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  text-align: right;
+}
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+.publications ol.bibliography li {
+  margin-bottom: 1rem;
+}
+.publications ol.bibliography li .preview {
+  width: 100%;
+  min-width: 80px;
+  max-width: 200px;
+}
+.publications ol.bibliography li .abbr {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+.publications ol.bibliography li .abbr abbr {
+  display: inline-block;
+  background-color: var(--global-theme-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.publications ol.bibliography li .abbr abbr a {
+  color: white;
+}
+.publications ol.bibliography li .abbr abbr a:hover {
+  text-decoration: none;
+}
+.publications ol.bibliography li .abbr .award {
+  color: var(--global-theme-color) !important;
+  border: 1px solid var(--global-theme-color);
+}
+.publications ol.bibliography li .title {
+  font-weight: bolder;
+}
+.publications ol.bibliography li .author a {
+  border-bottom: 1px dashed var(--global-theme-color);
+}
+.publications ol.bibliography li .author a:hover {
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+.publications ol.bibliography li .author > em {
+  border-bottom: 1px solid;
+  font-style: normal;
+}
+.publications ol.bibliography li .author > span.more-authors {
+  color: var(--global-text-color-light);
+  border-bottom: 1px dashed var(--global-text-color-light);
+  cursor: pointer;
+}
+.publications ol.bibliography li .author > span.more-authors:hover {
+  color: var(--global-text-color);
+  border-bottom: 1px dashed var(--global-text-color);
+}
+.publications ol.bibliography li .links a.btn {
+  color: var(--global-text-color);
+  border: 0.25px solid var(--global-text-color);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.publications ol.bibliography li .links a.btn:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+.publications ol.bibliography li .hidden {
+  font-size: 0.875rem;
+  max-height: 0px;
+  overflow: hidden;
+  text-align: justify;
+  transition-property: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+}
+.publications ol.bibliography li .hidden p {
+  line-height: 1.4em;
+  margin: 10px;
+}
+.publications ol.bibliography li .hidden pre {
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 10px;
+}
+.publications ol.bibliography li .hidden.open {
+  max-height: 100em;
+  transition-property: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+}
+.publications ol.bibliography li div.abstract.hidden {
+  border: dashed 1px var(--global-bg-color);
+}
+.publications ol.bibliography li div.abstract.hidden.open {
+  border-color: var(--global-text-color);
+}
+
+figure.highlight {
+  margin: 0 0 1rem;
+}
+
+pre {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+pre pre, pre code {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+code {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 3px;
+  padding: 3px 3px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.post .post-meta {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+.post .post-tags {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+}
+.post .post-tags a {
+  color: var(--global-text-color-light);
+  text-decoration: none;
+}
+.post .post-tags a:hover {
+  color: var(--global-theme-color);
+}
+.post .post-content blockquote {
+  border-left: 5px solid var(--global-theme-color);
+  padding: 8px;
+}
+/*# sourceMappingURL=main.css.map */
