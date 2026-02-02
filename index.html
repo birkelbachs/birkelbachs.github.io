@@ -11,6 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Stephanie Birkelbach</title>
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 <meta name="author" content="Stephanie Birkelbach">
 <meta name="description" content="Personal website for Stephanie Birkelbach.">
 <meta name="keywords" content="stephanie-birkelbach">
@@ -77,7 +78,6 @@
         <li class="nav-item"><a class="nav-link" href="#education_id">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#awards_id">Awards</a></li>
         <li class="nav-item"><a class="nav-link" href="#work_id">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#more_id">More</a></li>
       </ul>
     </div>
   </div>
@@ -202,7 +202,73 @@
 </table>
 </div>
 
+
 <!-- Research Thrust 1 -->
+<div class="pub-thrust thrust-2">
+  <h3>Social Computing & Cultural AI Systems</h3>
+  Language technologies increasingly mediate how people communicate, create, and interpret information at scale. In this line of work, I study and build AI systems that operate within social, cultural, and platform-level contexts, where meaning is shaped by communities, norms, and narratives. My research examines how these contextual forces influence model behavior and system outcomes, with the goal of designing language technologies that better align with the social dynamics in which they are deployed.
+  <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications -->
+
+      <!-- SocialPulse Paper-->
+      <tr>
+
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/socialpulse.png">
+        </td>
+        
+        <td style="font-size: large;">SocialPulse: An Open-Source Subreddit Sensemaking Toolkit<br>
+          <b style="font-size: medium;"> <b><u>Stephanie Birkelbach</u></b>, Maria Teleki, Peter Carragher, Xiangjue Dong, Nehul Bhatnagar, James Caverlee</div></b><br>
+          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University, Revionics</i><br>
+          <a href=".">arXiv (Demo) 2026</a><br>
+
+          <div class="button-cell">
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a>-->
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/birkelbachs/SocialPulse" role="button">GitHub</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Poster</a> -->
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/zRprjXwFwQ0" role="button">Video</a> 
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+          </div>
+
+          <div class="collapse" id="abstract-text-ID-alwerj">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Understanding how online communities discuss and make sense of complex social issues is a central challenge in social media research, yet existing tools for large-scale discourse analysis are often closed-source, difficult to adapt, or limited to single analytical views. We present SocialPulse, an open-source subreddit sensemaking toolkit that unifies multiple complementary analyses -- topic modeling, sentiment analysis, user activity characterization, and bot detection -- within a single interactive system. SocialPulse enables users to fluidly move between aggregate trends and fine-grained content, compare highly active and long-tail contributors, and examine temporal shifts in discourse across subreddits. The demo showcases end-to-end exploratory workflows that allow researchers and practitioners to rapidly surface themes, participation patterns, and emerging dynamics in large Reddit datasets. By offering an extensible and openly available platform, SocialPulse provides a practical and reusable foundation for transparent, reproducible sensemaking of online community discourse.
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-ID-alwerj">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{birkelbach26_socialpulse,<br>
+                  title     = {{SocialPulse: An Open-Source Subreddit Sensemaking Toolkit}},<br>
+                  author    = {Stephanie Birkelbach and Maria Teleki and Peter Carragher and Xiangjue Dong and Nehul Bhatnagar and James Caverlee<br>
+                  year      = {2026},<br>
+                  booktitle = {arXiv}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End SocialPulse Paper-->
+
+    </table>
+  </div>
+
+    <!-- <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      Publications NO IMG
+
+    </table>
+  </div> -->
+</div>
+
+<!-- Research Thrust 2 -->
+
 <div class="pub-thrust thrust-1">
   <h3>Disfluency-Aware Speech and Language Understanding</h3>
   Current speech and language understanding systems are built for fluent text, not for how people actually speak. Disfluencies -- pauses, repairs, hedges, and restarts -- are treated as artifacts to be removed, despite being fundamental to spoken communication. My work challenges this assumption by modeling disfluency as meaningful linguistic structure. I develop models, benchmarks, and evaluation frameworks that operate directly on spontaneous speech, yielding more robust language understanding in real-world conversational settings.
@@ -218,7 +284,7 @@
       </td>
 
       <td class="button-cell" style="font-size: large;">Z-Scores: A Metric for Linguistically Assessing Disfluency Removal<br>
-        <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, James Caverlee</div></b><br>
+        <b style="font-size: medium;">Maria Teleki, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, <b><u>Stephanie Birkelbach</u></b>, Jason Kim, Yin Zhang, James Caverlee</div></b><br>
         <a href=".">ICASSP 2025</a><br>
 
         <div class="button-cell">
@@ -267,7 +333,7 @@
           <img class="preview rounded z-depth-0" width="85%" src="./img/dres.png">
         </td>-->
       <td class="button-cell" style="font-size: medium;">DRES: Benchmarking LLMs for Disfluency Removal<br>
-        <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, James Caverlee</div></b><br>
+        <b style="font-size: medium;">Maria Teleki, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, <b><u>Stephanie Birkelbach</u></b> Jason Kim, Yin Zhang, James Caverlee</div></b><br>
         <a href=".">arXiv 2025</a><br>
 
         <div class="button-cell">
@@ -312,71 +378,6 @@
   </div>
 </div>
 
-
-<!-- Research Thrust 2 -->
-<div class="pub-thrust thrust-2">
-  <h3>Social Computing & Cultural AI Systems</h3>
-  Language technologies increasingly mediate how people communicate, create, and interpret information at scale. In this line of work, I study and build AI systems that operate within social, cultural, and platform-level contexts, where meaning is shaped by communities, norms, and narratives. My research examines how these contextual forces influence model behavior and system outcomes, with the goal of designing language technologies that better align with the social dynamics in which they are deployed.
-  <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications -->
-
-      <!-- SocialPulse Paper-->
-      <tr>
-
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/socialpulse.png">
-        </td>
-        
-        <td style="font-size: large;">SocialPulse: An Open-Source Subreddit Sensemaking Toolkit<br>
-          <b style="font-size: medium;">Stephanie Birkelbach, <b><u>Maria Teleki</u></b>, Peter Carragher, Xiangjue Dong, Nehul Bhatnagar, James Caverlee</div></b><br>
-          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University, Revionics</i><br>
-          <i style="font-size: medium;">(undergraduate first author)</i><br>
-          <a href=".">arXiv (Demo) 2026</a><br>
-
-          <div class="button-cell">
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a>-->
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/birkelbachs/SocialPulse" role="button">GitHub</a>
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Poster</a> -->
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/zRprjXwFwQ0" role="button">Video</a> 
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
-          </div>
-
-          <div class="collapse" id="abstract-text-ID-alwerj">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Understanding how online communities discuss and make sense of complex social issues is a central challenge in social media research, yet existing tools for large-scale discourse analysis are often closed-source, difficult to adapt, or limited to single analytical views. We present SocialPulse, an open-source subreddit sensemaking toolkit that unifies multiple complementary analyses -- topic modeling, sentiment analysis, user activity characterization, and bot detection -- within a single interactive system. SocialPulse enables users to fluidly move between aggregate trends and fine-grained content, compare highly active and long-tail contributors, and examine temporal shifts in discourse across subreddits. The demo showcases end-to-end exploratory workflows that allow researchers and practitioners to rapidly surface themes, participation patterns, and emerging dynamics in large Reddit datasets. By offering an extensible and openly available platform, SocialPulse provides a practical and reusable foundation for transparent, reproducible sensemaking of online community discourse.
-          </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-ID-alwerj">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{birkelbach26_socialpulse,<br>
-                  title     = {{SocialPulse: An Open-Source Subreddit Sensemaking Toolkit}},<br>
-                  author    = {Stephanie Birkelbach and Maria Teleki and Peter Carragher and Xiangjue Dong and Nehul Bhatnagar and James Caverlee<br>
-                  year      = {2026},<br>
-                  booktitle = {arXiv}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-      <!-- End SocialPulse Paper-->
-
-    </table>
-  </div>
-
-    <!-- <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      Publications NO IMG
-
-    </table>
-  </div> -->
-</div>
 
 <!-- Future Vision
 <div class="future-vision">
