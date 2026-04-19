@@ -110,6 +110,16 @@ body.sticky-bottom-footer {
   line-height: 1.35;
 }
 
+.pub-list .pub-venue {
+  font-size: 0.93rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.pub-list .pub-venue-main {
+  font-weight: 700;
+}
+
 
 .thrust-1 {
   border-color: #6B4E71; /* Deep muted plum - anchor color */
