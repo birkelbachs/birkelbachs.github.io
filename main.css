@@ -89,9 +89,25 @@ body.sticky-bottom-footer {
   margin-top: 1rem;
 }
 
+.pub-list-lg {
+  margin-top: 1.25rem;
+}
+
 .pub-list table td {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
+}
+
+.pub-list-lg table td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pub-list .pub-authors {
+  font-size: 0.9rem;
+  font-stretch: condensed;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
 }
 
 
